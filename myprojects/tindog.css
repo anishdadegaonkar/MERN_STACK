@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+   
+    
+}
+.hero{
+    background-image: url(img/dog-against-pink-background.jpg);
+    min-height: 95vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    
+    
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    
+}
+.nav_links{
+    list-style: none;
+    
+}
+.nav_links li{
+    display:inline-block;
+    padding: 0px 25px;
+    
+
+}
+.nav_links li a{
+    font-weight: 600;
+    text-decoration: none;
+    color: aliceblue;
+    
+}
+.nav_links li a:hover{
+    transition: all 0.3s ease 0s;
+    color: burlywood;
+    
+}
+.text{
+    height: 300px;
+    width: 500px;
+    position: relative;
+    left: 10%;
+    
+}
+.text h2{
+    font-size: 100px;
+    color: #00484f;
+    
+}
+.text p{
+    font-size: 30px;
+    color:#0c71c4;
+}
+.text button{
+    background-color: #ffb100;
+    position: absolute;
+    padding:20px 40px;
+    border-radius: 6px;
+    bottom: 40px;
+    border: none;
+    transition: 0.2s ease-in-out;
+    
+}
+.text button:hover{
+    background-color: gray;
+}
+.grid_items{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    flex-wrap: wrap;
+    
+    
+}
+.imgg img{
+    width: 100%;
+    height: 200px;
+    
+}
+.card{
+    margin: 10px;
+    border-bottom: 1px solid black;
+    max-width: 360px;
+    height: 600px;
+    /* border-radius: 10px; */
+    transition: 0.2s ease-in-out;
+    padding: 10px 30px;
+    
+    
+}
+.t p{
+    text-align:justify ;
+    line-height: 1.9;
+    
+}
+.older{
+    position: relative;
+    left: 15%;
+}
+.older h4{
+    color: rgb(55, 132, 239);
+}
+.curveimg{
+    margin-top: 100px;
+}
+.site_resource{
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.icons i{
+    border-radius: 2px;
+    color:#fff;
+    margin: 3px;
+    padding: 10px;
+    background-color: #ff9c00;;
+}
+.categories ul{
+    margin-top: 40px;
+}
+.categories ul span{
+    color: black;
+}
+.categories li{
+    color: #ff9c00;
+    list-style-type: none;
+    letter-spacing: 0.1rem;
+}
+.sitecontent ul{
+    margin-top: 40px;
+}
+.sitecontent li{
+    list-style-type: none;
+    color: #ff9c00;
+}
+.search{
+    position: relative;
+    background-color: #fbfcff;
+    height: 50px;
+    width: 400px;
+    margin-top: 50px;
+    border: 1px solid black;
+}
+.search input{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+}
+.search i{
+    position: absolute;
+    top: 15px;
+    right: 10px;
+}
+footer{
+    margin-top: 50px;
+    text-align: center;
+    padding: 30px;
+    border-top: 2px solid #eeeef3;
+}
