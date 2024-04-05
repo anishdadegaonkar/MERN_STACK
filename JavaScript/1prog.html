@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .con{
+        border: 1px solid black;
+        height: 300px;
+        width: 500px;
+        padding: 10px;
+        position: absolute;
+        left: 30%;
+    }
+    .con select{
+        width: 100%;
+    }
+    .con input{
+        width: 100%;
+    }
+    .con button{
+        padding: 10px;
+        position: absolute;
+        top: 50%;
+        left: 40%;
+    }
+    .con p{
+        border: 2px solid black;
+        height: 50px;
+        position: relative;
+        top: 40%;
+        width: 100% !important;
+    }
+</style>
+<body>
+    <pre>
+        DataTypes
+    1. String
+    2. Number
+    3. Boolean
+    4. Object Array Set Map Function
+    5. Function
+    6. BigInit
+    7. Symbol
+    8. Null
+    9. Undefined
+    </pre>
+    <button onclick="alertmsg();">Click to Get Your Name</button>
+    <button onclick="writemsg();">Click to Do Addition</button>
+    <br>
+    <div class="con">
+        <select name="" id="selectsymbol">
+            <option value="">Select Operation</option>
+            <option value="Addition">Addition</option>
+            <option value="Substraction">Substraction</option>
+            <option value="Division">Division</option>
+            <option value="Multiplication">Multiplication</option>
+        </select>
+        <label for="">Number 1</label>
+        <input type="number" id="i1">
+        <label for="">Number 2</label>
+        <input type="number" id="i2">
+        <button onclick="add();">Get Output</button>
+        <p id="result"></p><br>
+    </div>
+    
+</body>
+<script>
+    function writemsg(){
+        num1 =  Number(prompt('Hello Please Your Name'));
+        num2 =  Number(prompt('Hello Please Your Name'));
+        console.log(num1 + num2);
+    }
+
+    function alertmsg(){
+        name1 =  prompt('Hello Please Your Name');
+        name2 =  prompt('Hello Please Your Last Name');
+        console.log(name1 + name2);
+    }
+
+    function add(){
+        n1 =  Number(document.getElementById('i1').value);
+        n2 =  Number(document.getElementById('i2').value);
+        n3 = document.getElementById('selectsymbol').value;
+        if(n3 == 'Addition')
+        {
+            document.getElementById('result').innerHTML = n1+n2;
+        }
+        else if(n3 == 'Substraction'){
+            document.getElementById('result').innerHTML = n1-n2;
+        }
+        else if(n3 == 'Division'){
+            document.getElementById('result').innerHTML = n1/n2;
+        }
+        else{
+            document.getElementById('result').innerHTML = n1*n2;
+        }
+    }
+
+    // document.write('hhhhhhhhhhhhh');
+</script>
+</html>
