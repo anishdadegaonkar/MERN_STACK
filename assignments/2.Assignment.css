@@ -1,0 +1,36 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.first{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    background-color: black;
+}
+.imgg{
+    display: flex;
+}
+.imgg i,h6{
+    color: whitesmoke;
+}
+.imgg i{
+    position: absolute;
+    top: 30px;
+    left: 200px;
+}
+.imgg h6{
+    position: absolute;
+    top: 30px;
+    left: 240px;
+}
+ul,li{
+    color: whitesmoke;
+    list-style-type: none;
+    float: left;
+    margin-left: 60px;
+    
+}

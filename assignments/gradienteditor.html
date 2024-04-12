@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient Editor</title>
+    <link rel="stylesheet" href="gradienteditor.css">
+</head>
+<body>
+
+
+    <div class="container" id="container-one"></div>
+        <div class="i">
+            <input type="color" id="color1">
+            <input type="color" id="color2">
+            <select name="" id="gradtype">
+                <option value="linear">linear-gradient</option>
+                <option value="Radial-gradient">Radial-gradient</option>
+                <option value="Conical-gradient">Conical-gradient</option>
+            </select>
+        </div>
+    <!-- <button onclick="select()">Click To Select Type</button> -->
+    <button onclick="changec()">CLICK TO Change Color to Gradient</button>
+<script>
+    document.getElementById('container-one').style.backgroundColor = 'black';
+    function changec(){
+        c1 = document.getElementById('color1').value;
+        c2 = document.getElementById('color2').value;
+        gtype = document.getElementById('gradtype').value;
+        //console.log();
+        if( gtype == 'linear'){
+            document.getElementById('container-one').style.backgroundImage = `linear-gradient(${c1},${c2})`;
+        }
+        else if (gtype == 'Radial-gradient'){
+            document.getElementById('container-one').style.backgroundImage = `radial-gradient(${c1},${c2})`;
+        }
+        else{
+            document.getElementById('container-one').style.backgroundImage = `conic-gradient(${c1},${c2})`;
+        }
+    }
+</script>    
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tribute Page</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+    body{
+        background-image: url(./img/india-bg.webp);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .main{
+        margin: 100px;
+        border: 1px solid black;
+        height: 500px;
+        display: flex;
+        justify-content: flex-start;
+        border-radius: 10px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.7);
+    }
+    .left{
+        border: 1px solid black;
+        width: 70%;
+        border-radius: 10px 0px 0px 10px;
+        font-family: 'Poppins', sans-serif;
+        text-align: center;
+    }
+    .right{
+        border: 1px solid black;
+        width: 30%;
+        border-radius:0px 10px 10px 0px;
+    }
+    p{
+        margin: 20px;
+        text-align: justify;
+        font-weight: bold;
+    }
+    li{
+        text-align: left;
+    }
+    img{
+        border-radius:0px 10px 10px 0px;
+    }
+    button{
+        margin-left: 750px;
+        padding:5px;
+        border-radius: 4px;
+        background-color: tomato;
+    }
+</style>
+<body>
+    <div class="main">
+        <div class="left">
+            <h4>Mohandas Karamchand Gandhi</h4>
+            <p>Born and raised in a Hindu family in coastal Gujarat, Gandhi trained in the law at the Inner Temple, London, and was called to the bar at age 22 in June 1891. After two uncertain years in India, where he was unable to start a successful law practice, he moved to South Africa in 1893 to represent an Indian merchant in a lawsuit. He went on to live in South Africa for 21 years. It was here that Gandhi raised a family and first employed nonviolent resistance in a campaign for civil rights. In 1915, aged 45, he returned to India and soon set about organising peasants, farmers, and urban labourers to protest against excessive land-tax and discrimination.</p>
+            <ul>
+                <li>Born:2 October 1869 Porbandar, Porbandar State, Kathiawar Agency, British India(present-day Gujarat, India)                    
+                </li>
+                <li>Died:	30 January 1948 (aged 78) New Delhi, Dominion of India</li>
+                <li>Cause of death	Assassination (gunshot wounds)</li>
+            </ul>
+            <p>Gandhi's vision of an independent India based on religious pluralism was challenged in the early 1940s by a Muslim nationalism which demanded a separate homeland for Muslims within British India. In August 1947, Britain granted independence, but the British Indian Empire was partitioned into two dominions, a Hindu-majority India and a Muslim-majority Pakistan.</p>
+            <a href="https://en.wikipedia.org/wiki/Mahatma_Gandhi"><button>To Know More</button></a>
+        </div>
+        <div class="right">
+            <img src="./img/tribute.jpg" alt="" width="395  px" height="498px">
+        </div>
+    </div>
+</body>
+</html>

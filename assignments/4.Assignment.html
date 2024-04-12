@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4th Assignment</title>
+</head>
+<style>
+    table,tr,th,td{
+        border: 1px solid black;
+    }
+    .oner{
+        width: 350px;
+        height: 100px;
+        border-radius: 20px;
+        position: absolute;
+        left: 20%;
+        top: 35%;
+        background-color:rgb(0, 191, 255);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+    }
+    .twor{
+        border: 2px dashed white;
+        width: 330px;
+        height: 80px;
+        border-radius: 20px;
+        position: absolute;
+        left:2%;
+        top: 8%;
+    }
+    p{
+        font-size: xx-large;
+    }
+    span{
+        color:rgb(0, 0, 255);
+    }
+    p::first-line{
+        color: aqua;
+    }
+    p::first-letter{
+        color: blue;
+    }
+    button{
+        height: 60px;
+        width: 200px;
+        padding: 20px;
+        font-size: larger;
+        font-family: sans-serif;
+        color: aliceblue;
+        border-radius: 10px;
+        background-color: cornflowerblue;
+        position: absolute;
+        left: 30%;
+    }
+    .i{
+        background-image: url(img/landscape.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 1000px;
+        height: 300px;
+        position: absolute;
+        left: 15%;
+    }
+    .t{
+        width: 500px;
+        background: transparent;
+        backdrop-filter: blur(2px);
+        position: absolute;
+        left: 20%;
+        top: 30%;
+        border: 1px solid black;
+        padding: 50px;
+    }
+</style>
+<body>
+    <h2>Create a table</h2>
+    <table>
+        <tr>
+            <th>Quick</th>
+            <th colspan="2">Brown fox</th>
+            <th >Jumps</th>
+        </tr>
+        <tr>
+            <th rowspan="3">over the </th>
+            <th>lazy</th>
+            <th>dog</th>
+            <th>and</th>
+        </tr>
+        <tr>
+           <th>then</th>
+           <th>it</th>
+           <th>fall</th>
+        </tr>
+        <tr>
+            <th colspan="4">pray to a lion</th>
+        </tr>
+    </table>
+    <hr>
+    <h2>Create Stiched look</h2>
+    <div class="oner">
+        <div class="twor"></div>
+    </div>
+    <br><br><br><br><br><br><br><hr>
+    <h2>create paragraph</h2>
+    <p>
+    In 1986 the Defence Advance Research Project Agency (DARPA), the 
+    Army Research Office (ARO), the National Science Foundation (NSF), and ESL
+    </p>
+    <hr>
+    <h2>Create a Button</h2>
+    <button>Subscribe Now</button>
+    <br><br><br><br><br><hr>
+   
+   <div class="i">
+        <div class="t">This is some text that is placed in the transparent box</div>
+   </div>
+</body>
+</html>
