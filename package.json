@@ -1,0 +1,12 @@
+{
+  "name": "batch---22---mern-stack",
+  "version": "1.0.0",
+  "description": "\"#This is readme.md file\"",
+  "main": "6.fontclassid.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,50 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-image: url(./img/bg.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.divone{
+    border: 2px solid black;
+    color: brown;
+    background-color: aquamarine;
+}
+.divtwo{
+    border: 2px solid black;
+    color: brown;
+    background-color: aquamarine;
+}
+.divthree{
+    border: 2px solid black;
+    color: brown;
+    background-color: aquamarine;
+}
+.margindiv{
+    margin: 50px 50px;
+    padding: 5px;
+}
+.centerimg{
+    display: block;
+    margin: 10px auto;
+    border-radius:50% 50%;
+    padding: 10px auto;
+}
+.container{
+border: 2px solid black;
+width: 100%;
+height: 250px;
+}
+.imgcontainer{
+width: 20%;
+float: right;
+text-align: center;
+margin-top: 40px;
+}
+.textcontainer{
+text-align: center;
+width: 80%;
+float: left;
+}

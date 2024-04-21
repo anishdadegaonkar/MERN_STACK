@@ -10,3 +10,4 @@ function genPassword(){
     }
     document.getElementById("password").value = password;
 }
+    

@@ -1,0 +1,45 @@
+.navbar ul li{
+    list-style-type: none;
+    float: left;
+    margin: 5px 10px;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: black;
+    font-family: sans-serif;
+}
+.navbar{
+    background-color: bisque;
+    height: 40px;
+    border-radius: 2px;
+}
+.navbar ul li a:hover{
+    cursor: pointer;
+    font-size: larger;
+}
+.image{
+    display: block;
+    float: left;
+    margin-top: 4px;
+    margin-left: 5px;
+}
+.vernav{
+    background-color:darkseagreen;
+    height: 250px;
+    width: 10%;
+    
+}
+.vernav ul li{
+    margin:0px;
+    padding: 20px 5px;
+    list-style-type: none;
+}
+table,th,td{
+    align-items: center;
+    border: 2px solid black;
+    width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    background-color:lightsalmon;
+    border-radius: 10px;
+}

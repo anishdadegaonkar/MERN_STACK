@@ -1,0 +1,62 @@
+Question 2 :
+Given the following code snippet, explain what will be logged to the console and why
+const arr = [1,2,3,4,5];
+const result = arr.map(x=>{
+    if(x==3){
+        return 2;
+    }
+    return x*2;
+});
+console.log(result);
+
+Ans : 
+The Above code will display the result as [2,4,undefined,8,10] 
+because map function ittrates the whole array when we are checking for if x == 3 it returns nothings and others are multiple of 2 
+
+Question 3: 
+Explain the concept of closures in JavaScript and provide an example.
+
+Ans : 
+A closure in JavaScript is a function that has access to the variables and parameters of its outer (enclosing) function, even after the outer function has finished executing. In other words, it’s a function bundled together with the environment in which it was created. This environment includes all the variables, parameters, and functions that were in scope at the time of the closure’s creation.
+
+Question 4: 
+What is event delegation in JavaScript? How can it be useful in optimizing event handling
+
+Ans :
+Event delegation in JavaScript is handling events at a higher level in the DOM hierarchy, typically on a parent element, rather than on individual child elements. It optimizes event handling by reducing the number of event listeners, simplifying code, and accommodating dynamically added elements effortlessly.
+
+Question 5: 
+Describe the differences between null and undefined in JavaScript. When would you use one over the other?
+
+Ans:
+Undefined: Typically represents a variable that has been declared but not initialized, or a non-existent property. It's the default value for uninitialized variables.
+Null: Represents an intentional absence of any object value. It's typically used to signify that a variable intentionally has no value.
+
+Question 6: 
+What are Promises in JavaScript? How do they differ from callbacks? Provide an example of using a Promise?
+
+Ans :
+Promises in JavaScript are objects representing the eventual completion or failure of an asynchronous operation. They provide a cleaner alternative to using callbacks for handling asynchronous code.
+// Example: Asynchronous function that returns a Promise
+function fetchData() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const data = 'Data fetched successfully';
+            // Simulate successful data retrieval
+            resolve(data);
+            // Simulate an error
+            // reject('Error: Data retrieval failed');
+        }, 2000); // Simulating a delay of 2 seconds
+    });
+}
+
+// Using the Promise
+fetchData()
+    .then(data => {
+        console.log(data); // Output: Data fetched successfully
+    })
+    .catch(error => {
+        console.error(error); // Output: Error: Data retrieval failed
+    });
+In this example, fetchData() returns a Promise. We handle the resolved value using .then() and handle errors using .catch().
+

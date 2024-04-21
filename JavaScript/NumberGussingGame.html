@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing</title>
+</head>
+<style>
+    body{
+        background-color: #333232;
+    }
+    #container{
+        background-color: #0E2431;
+        border: 5px solid #F5E4C3;
+        height: 275px;
+        width: 750px;
+        margin: auto;
+        text-align: center;
+    }
+    p{
+        color: whitesmoke;
+        font-size: 24px;
+    }
+    input{
+        width: 100px;
+        margin: 25px auto;
+    }
+    #btn{
+        margin: 25px auto auto 5px;
+    }
+</style>
+<body>
+    <div id="container">
+        <p>Enter a Number Between 1 - 100</p>
+        <p id="outputtext">Enter A Number Below</p>
+        <input type="text" id="userInput">
+        <button id="btn">Enter</button>
+    </div>
+    <script>
+        let btn = document.getElementById('btn');
+        let output = document.getElementById('outputtext');
+        let number = [Math.floor(Math.random()*100)]
+
+        btn.addEventListener('click', function(){
+            let input = document.getElementById('userInput').value;
+            if(input==number){
+                output.innerHTML = `You Guessed Right , Random number Was ${number}`;
+            }
+            else if(input < number){
+                output.innerHTML = `TOO LOW!`;
+            }
+            else{
+                output.innerHTML = `TOO HIGH!`;
+            }
+        })
+    </script>
+</body>
+</html>

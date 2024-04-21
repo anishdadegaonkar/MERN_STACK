@@ -1,0 +1,94 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.hero{
+    background-image: url(img/warehouse_bg.jpg);
+    min-height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    border-bottom: 2px solid black;
+    
+}
+.nav_links{
+    list-style: none;
+    
+}
+.nav_links li{
+    display:inline-block;
+    padding: 0px 25px;
+    
+
+}
+.nav_links li a{
+    font-weight: 600;
+    font-size: 20px;
+    text-decoration: none;
+    color: aliceblue;
+    
+}
+.nav_links li a:hover{
+    transition: all 0.3s ease 0s;
+    color: burlywood;
+}
+.buy{
+    position: absolute;
+    left: 35%;
+    top: 45%;
+    height: 200px;
+    width: 500px;
+    text-align: center;
+    /* backdrop-filter: blur(2px); */
+}
+.buy h3{
+    font-size: 35px;
+    color:aliceblue;
+}
+.buy button{
+    margin: 10px;
+    padding: 25px;
+    background: #DBD3D8;
+    border: none;
+    border-radius: 2px;
+}
+.buy button:hover{
+    background-color: burlywood;
+}
+.buy p{
+    color: aliceblue;
+}
+.grid_items{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    flex-wrap: wrap;   
+}
+.card{
+    margin: 50px;
+    height: 600px;
+    width: 350px;
+}
+.imgg img{
+    height: 500px;
+    width: 346px;
+}
+.card h4{
+    margin-top: 10px;
+    font-family: sans-serif;
+    font-weight:lighter;
+}
+.work{
+    width: 100%;
+    height: 200px;
+    background: #37CFA2;
+    text-align: center;
+}

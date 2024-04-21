@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>String Project</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="form-group container" >
+        <label for="exampleFormControlTextarea1" class="mt-4">Enter Paragraph</label>
+        <textarea class="form-control" id="para" rows="3"></textarea>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+            <button class="btn btn-warning" onclick="cw();">Count Words</button>
+            <button class="btn btn-warning" onclick="cl();">Count Letters</button>
+            <button class="btn btn-warning" onclick="cs();">Count Spaces</button>
+            <button class="btn btn-warning" onclick="nl();">Count New Line</button>
+            <button class="btn btn-warning" onclick="titleCase();">Title Case</button>
+            <button class="btn btn-warning" onclick="cv();">Count Vowels</button>
+            <button class="btn btn-warning" onclick="cc()">Count Consonents</button>
+            <button class="btn btn-warning" onclick="sw();">Sort Words</button>
+            <button class="btn btn-warning" onclick="upper();">Capitalise</button>
+            <button class="btn btn-warning mt-3" onclick="lower();">Small Letter</button>
+            </div>
+            <h5 class="ml-3 mt-3">Result Will Be Shown Here:</h5>
+            <textarea class="ml-2 mt-1" style="border: 2px solid green;height: 50px;width: 600px;" id="res"></textarea>
+        </div>
+    </div>
+    <script>
+      // text.split(/\n/).length
+      cw = () =>{
+        text = document.getElementById("para").value;
+        document.getElementById('res').innerHTML = text.split(" ").length;
+      }
+      cl = () =>{
+        text = document.getElementById("para").value;
+        document.getElementById('res').innerHTML = text.length;
+      }
+      cs = () =>{
+        text = document.getElementById("para").value;
+        document.getElementById('res').innerHTML = text.split(" ").length - 1;
+      }
+      upper=()=>{
+        text = document.getElementById("para").value;
+        document.getElementById('res').innerHTML = text.toUpperCase();
+      }
+      lower=()=>{
+        text = document.getElementById("para").value;
+        document.getElementById('res').innerHTML = text.toLowerCase();
+      }
+      nl = () =>{
+        text = document.getElementById("para").value;
+        document.getElementById('res').innerHTML = text.split('\\n').length;
+      }
+      titleCase =() => {
+        str = document.getElementById("para").value;
+        str2 = str.toLowerCase().split(' ');
+        for (var i = 0; i < str2.length; i++) {
+          str2[i] = str2[i].charAt(0).toUpperCase() + str2[i].slice(1); 
+        }
+        document.getElementById('res').innerHTML = str2.join(' ');
+      }
+      cv=()=>{
+        text = document.getElementById("para").value;
+        let count = 0;
+        for(let i = 0; i < text.length; i++)
+        {
+          if(text[i] =='a' || text[i] =='e' || text[i] =='i' || text[i] =='o' || text[i] =='u')
+          {
+            count++;
+          }
+        }
+        document.getElementById('res').innerHTML = count;
+      }
+      cc=()=>{
+        text = document.getElementById("para").value;
+        let count = 0;
+        for(let i = 0; i < text.length; i++)
+        {
+          if(text[i] !=='a' && text[i] !=='e' && text[i] !=='i' && text[i] !=='o' && text[i] !=='u')
+          {
+            count++;
+          }
+        }
+        document.getElementById('res').innerHTML = count;
+      }
+      sw=()=>{
+        text = document.getElementById("para").value;
+        const t = text.split(" ");
+        document.getElementById('res').innerHTML = t.sort();
+      }
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

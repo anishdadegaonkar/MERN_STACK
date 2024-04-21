@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picture and basic form</title>
+</head>
+<body>
+    <!-- <picture>
+        <source media="(min-width:850px)" srcset="img\bg.jpeg">
+        <source media="(min-width:450px)" srcset="img\car.jpg">
+        <img src="./img/car.jpg" alt="Image not found">
+    </picture> -->
+    <style>
+        sup{
+            color: red;
+        }
+        form{
+                border: 1px solid black;
+                flex-wrap: nowrap;
+                flex-direction: column;
+                align-content: center;
+                justify-content: center;
+            }
+    </style>
+    <h4>Basic Form</h4>
+    <form action="#">
+        <label for="fname">First Name <sup>*</sup> </label><br>
+        <input type="text" name="fname" id="fname" placeholder="Enter your name..." required ><br>
+        <label for="lname">Last Name <sup>*</sup> </label><br>
+        <input type="text" name="lname" id="lname" placeholder="Enter your last name..." autofocus><br>
+        <label for="cnumber">Contact Number</label><br>
+        <input type="number" id="cnumber" name="cnumber" placeholder="Enter your number..."><br>
+        <label for="">Dob</label><br>
+        <input type="date" id="" name="" placeholder="Enter your dob"><br>
+        <label for="">Password</label><br>
+        <input type="password" id="" name="" placeholder="Enter your password"><br>
+        <label for="">Message</label><br>
+        <textarea name="" id="" cols="30" rows="10"></textarea><br>
+        <label for="">Choose your fav language</label><br>
+        <input type="radio">
+        <label for="">Html</label><br>
+        <input type="radio">
+        <label for="">Css</label><br>
+        <label for="">Please select fav lang</label><br>
+        <input type="checkbox" name="" id="">
+        <label for="">Html</label>
+        <input type="checkbox" name="" id="">
+        <label for="">Css</label><br>
+        <label for="">Chose files</label><br>
+        <input type="file" multiple><br>
+        <label for="">Chose range betn 0-100</label>
+        <input type="range" min="0" max="100"><br>
+        <input type="text" id="data">
+        <datalist id="data">
+            <option value="">A</option>
+        </datalist>
+        <input type="submit" name="" id="">
+        <input type="reset">
+        <button onclick="return greeting();">Click to see your name</button>
+        <div id="result"></div>
+    </form>
+    <script>
+        function greeting(){
+            fname = document.getElementById('fname').value;
+            lname = document.getElementById('lname').value;
+            document.getElementById('result').innerHTML = 'Welcome:' +fname+ ' - ' +lname;
+            return false; 
+        }
+    </script>
+</body>
+</html>

@@ -65,7 +65,7 @@ function displayMessage(data)
     messageElement.classList.add('message');
     messageElement.innerHTML=`<strong>${data.user}:</strong> ${data.message}<br><strong>${data.server1}:</strong> ${data.messageAI}<br>
     <span class="timestamp">${timestamp}</span>`;
-    messageElement.classList.add("incoming");
+    messageElement.classList.add("outgoing");
     chatOutput.appendChild(messageElement);
     chatOutput.scrollTop=chatOutput.scrollHeight;
 

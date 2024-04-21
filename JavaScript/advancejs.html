@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        width: 100%;
+        height: 20vh;
+        border: 2px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+    .box{
+        height: 100px;
+        /* width: 50px; */
+        
+    }
+    p{
+        font-size: 30px;
+        /* padding-left: 35px; */
+    }
+</style>
+<body>
+
+
+   
+        
+        
+        
+        
+
+
+        <div class="container">
+            
+                <div class="box"><p id="Hour"></p></div>
+                <div class="box"><p id="Min"></p></div>
+                <div class="box"><p id="Sec"></p></div>
+            
+        </div>
+        
+   
+    
+
+<script>
+    // document.write("HI");
+    // document.write("<br>");
+    // document.write("Loading setTimeout");
+    
+    // setInterval( ()=>{
+    //     document.write("I AM GOOD");
+    // },2000);
+    // setTimeout( ()=>{
+    //     document.write("..............");
+    // },5000 );
+
+
+
+    setInterval(()=>{
+        const a = new Date();
+        let seconds = a.getSeconds();
+        const b = new Date();
+        let minutes = b.getMinutes();
+        const c = new Date();
+        let hour = c.getHours();
+        document.getElementById("Min").innerHTML =' : '+minutes;
+        document.getElementById("Sec").innerHTML =' : '+seconds;
+        document.getElementById("Hour").innerHTML =hour;
+    },1000)
+
+    function fetchData() {
+    return new Promise(function(resolve, reject) {
+
+        fetch('https://api.quotable.io/random')
+
+            .then(response => response.json())
+
+            .then(data => resolve(data))
+
+            .catch(error => reject(error));
+    });
+}
+
+fetchData()
+    .then(data => console.log('Data fetched:', data))
+    .catch(error => console.error('Error fetching data:', error));
+
+
+</script>    
+</body>
+</html>

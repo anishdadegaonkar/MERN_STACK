@@ -13,6 +13,8 @@
         <div class="i">
             <input type="color" id="color1">
             <input type="color" id="color2">
+            <input type="color" id="color3">
+            <input type="color" id="color4">
             <select name="" id="gradtype">
                 <option value="linear">linear-gradient</option>
                 <option value="Radial-gradient">Radial-gradient</option>
@@ -26,6 +28,8 @@
     function changec(){
         c1 = document.getElementById('color1').value;
         c2 = document.getElementById('color2').value;
+        c3 = document.getElementById('color3').value;
+        c4 = document.getElementById('color4').value;
         gtype = document.getElementById('gradtype').value;
         //console.log();
         if( gtype == 'linear'){
@@ -35,7 +39,7 @@
             document.getElementById('container-one').style.backgroundImage = `radial-gradient(${c1},${c2})`;
         }
         else{
-            document.getElementById('container-one').style.backgroundImage = `conic-gradient(${c1},${c2})`;
+            document.getElementById('container-one').style.backgroundImage = `conic-gradient(${c1},${c2},${c3},${c4})`;
         }
     }
 </script>    

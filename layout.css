@@ -1,0 +1,55 @@
+body{
+    border: 1px solid black;
+    padding: 2px;
+    width: 50%;
+}
+header{
+    border: 1px solid black;
+    height: 100px;
+}
+header p{
+    text-align: center;
+    margin-top: 40px;
+}
+nav{
+    border: 1px solid black;
+    height: 100px;
+    text-align: center;
+}
+nav p{
+    margin-top: 40px;
+}
+section{
+    border: 1px solid black;
+    height: 100px;
+    width: 69%;
+}
+section p{
+    text-align: center;
+}
+article{
+    border: 1px solid black;
+    height: 100px;
+    width: 69%;
+}
+article p{
+    text-align: center;
+}
+aside{
+    border: 1px solid black;
+    height: 220px;
+    width: 30%;
+    position: relative;
+    float: right;
+    bottom: 221px;
+}
+aside p{
+    text-align: center;
+}
+footer{
+    border: 1px solid black;
+    height: 100px;
+}
+footer p{
+    text-align: center;
+}

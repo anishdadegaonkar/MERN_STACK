@@ -1,0 +1,25 @@
+table,th,td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+table{
+    width: 70%;
+    margin: 3px auto;
+    text-align: center;
+}
+th{
+    font-size: larger;
+    background-color: gray;
+}
+td{
+    font-size: larger;
+}
+tr{
+    height: 90px;
+}
+tr:nth-child(even){
+    background-color: yellow;
+}
+.overflow{
+    overflow-y:scroll;
+}

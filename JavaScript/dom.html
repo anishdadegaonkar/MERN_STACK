@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.card{
+    border: 2px solid black;
+    height: 500px;
+    width: 400px;
+    position: relative;
+    left: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+.image img{
+    width: 200px;
+    padding: 20px;
+}
+.text button{
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+</style>
+<body>
+    <p id="Changecontent">Paragraph</p>
+    <button onclick="font();">Press</button>
+    <button onclick="changebg();"> Change Bg</button>
+
+
+    <div class="card">
+        <div class="image" id="img-bg">
+            <img src="./img/iphonered.webp" alt="" id="imm">
+        </div>
+        <div class="text">
+            <button style="background-color: red;" onclick="ired();"></button>
+            <button style="background-color: black;" onclick="iblack();"></button>
+            <button style="background-color: gray;" onclick="igrey();"></button>
+        </div>
+    </div>
+</body>
+<script>
+    function font(){
+        var checkfont = document.getElementById("Changecontent");
+        if (checkfont.style.fontWeight == 'bold'){
+            checkfont.style.fontWeight = 'normal';
+        }
+        else
+        {
+            checkfont.style.fontWeight = 'Bold';
+        }
+        
+    }
+    function changebg(){
+      
+            document.body.style.backgroundColor = 'black';    
+       
+    }
+    function iblack(){
+        document.getElementById("imm").src = "./img/iphoneblack.webp"; 
+    }
+    function igrey(){
+        document.getElementById("imm").src = "./img/iphonegray.webp"; 
+    }
+    function ired(){
+        document.getElementById("imm").src = "./img/iphonered.webp"; 
+    }
+</script>
+</html>

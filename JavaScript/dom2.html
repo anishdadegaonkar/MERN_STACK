@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table,th,td{
+        border: 1px solid black;
+        outline: none;
+    }
+</style>
+<body>
+    <ul id="ParentUl"></ul>
+    <button onclick="addItems();">Click to add items</button>
+    <ul id="ParentUlArray"></ul>
+    <button onclick="addArrayItems();">Click to add items</button>
+    <button onclick="addTable();">Create Table</button>
+    <table id="parenttable"></table>
+</body>
+<script>
+    function addItems(){
+        parentul = document.getElementById('ParentUl');
+        newLiItems =  document.createElement('li');
+        textItems = document.createTextNode('New Li');
+        newLiItems.appendChild(textItems);
+        parentul.appendChild(newLiItems);
+    }
+    function addArrayItems(){
+        arr = ['Mango','Apple','orange'];
+        parentArray = document.getElementById('ParentUlArray');
+
+        arr.forEach(element => {
+            newli = document.createElement('li');
+            litext = document.createTextNode(element);
+            newli.appendChild(litext);
+            parentArray.appendChild(newli);   
+        });
+    }
+    function addTable(){
+        ParentTable = document.getElementById('parenttable');
+       
+    }
+
+
+</script>
+</html>
