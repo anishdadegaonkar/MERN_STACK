@@ -9,7 +9,7 @@ matrix  - we can add screwx , screwy , transform , translate (multiple combinati
 transition - delay , duration , property , timing function
 
 topic name - css transition
-@keyframe - animation name , 
+keyframe - animation name , 
 assignments - heart shape , cloud , bouncing ball
 
 topic name - canvas svg
@@ -111,8 +111,13 @@ read doc on - nodejs.org/docs/latest/api/console.html
 
 topic - github
 git init , add , push (local to central repository) , commite , rollback , pull (to fetch data)
-diff between git (version control system - 2005,open source) and github (runs on cloud - 2008 , have some free storage) 
+diff between git (version control system - 2005,open source) and github (runs on cloud - 2008 , have some free storage)
 git init > git add README.md > git status > git config --global user.name > git commite -m "Added README.md File" 
 
 topic name = Socket.io
 enables connection between client and server
+
+topic name - mongodb
+data is saved in json format
+records in mongodb are called colletion
+localhost:27017
