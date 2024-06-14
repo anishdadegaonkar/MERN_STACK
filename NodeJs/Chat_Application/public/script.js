@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded',function()
     if(message!=='')
 {
     socket.emit('chat-message',{
-        user:'You',
+        user:'Anish',
         message:message,
         server1:'AI',
         messageAI:serverFunction(message),
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded',function()
 }
 function serverFunction(message)
 {
-    const keywords=['price','camera','display','os','ram'];
+    const keywords=['price','camera','display','os','ram','quality','hello'];
     const messageWords=message.split(' ');
     let ans='';
     let keywordFound=false;
@@ -52,7 +52,7 @@ function generateAnswer(keyword)
         case 'os':
             return 'The operating system of the product is kitkat.  ';
         case 'ram':
-            return 'The RAM of the product is 128px';
+            return 'The RAM of the product is 128gb';
         default:
             return 'Ask a correct question.';
 
@@ -65,7 +65,7 @@ function displayMessage(data)
     messageElement.classList.add('message');
     messageElement.innerHTML=`<strong>${data.user}:</strong> ${data.message}<br><strong>${data.server1}:</strong> ${data.messageAI}<br>
     <span class="timestamp">${timestamp}</span>`;
-    messageElement.classList.add("outgoing");
+    messageElement.classList.add("incoming");
     chatOutput.appendChild(messageElement);
     chatOutput.scrollTop=chatOutput.scrollHeight;
 

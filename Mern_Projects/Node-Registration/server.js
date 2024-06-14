@@ -59,8 +59,15 @@ app.post('/login', (req,res)=>{
             res.redirect('/login');
         }
     });
-});
 
+    const query2 = 'select * from products';
+    db.query(query2,(error, result)=>{
+        if (error) throw err;
+        var data = JSON.parse(JSON.stringify(result));
+        console.log(data);
+        res.render('../views/home.ejs', {data: data});
+    })
+});
 
 app.listen(PORT ,()=>{
     console.log(`server is running on port ${PORT}`);
