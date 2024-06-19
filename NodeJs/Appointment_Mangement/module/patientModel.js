@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const bcrypt = require('bcryptjs');
 
 const patient = mongoose.Schema({
     pname : {type: String, required: false},
@@ -10,5 +11,17 @@ const patient = mongoose.Schema({
     ppassword : {type: String, required: false},
     paddress : {type: String, required: false}
 });
+
+patient.pre('save', async function(next){
+    const user = this;
+    if(user.isModified('ppassword')){
+        user.ppassword = await bcrypt.hash(user.ppassword, 10);
+    }
+    next();
+});
+
+patient.methods.comparePassword = async function (password){
+    return await bcrypt.compare(password, this.ppassword);
+}
 
 module.exports = mongoose.model('Patient', patient);

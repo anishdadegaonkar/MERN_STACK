@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 const patientModule = require('../module/patientModel');
-
 addPatient = async (req,res) => {
     console.log(req.body);
     try{
@@ -24,29 +23,21 @@ getPatient = async (req,res) => {
     }
 }
 
-async function loginPatient(req, res) {
-    console.log(req.body);
-    try{
 
-        const newPatient = await patientModule.findOne({pemail: req.body.pemail, ppassword: req.body.ppassword});
-        if(!newPatient){
-            res.status(201).send({"message":"Patient not found",success:false});
+// brypted patient information is available
+async function loginPatient(req, res) {
+    try{
+        const {pemail,ppassword} = req.body;
+        const user = await patientModule.findOne({pemail});
+        if(!user || !(await user.comparePassword(ppassword))){
+            return res.status(400).send({error: 'Invalid email or password'});
         }
-    const isMatch = await patientModule.findOne({ppassword: req.body.ppassword});
-    if(!isMatch){
-        res.status(201).send({"message":"Password is incorrect",success:false});
-    }
-    else{
-        result ={"message":"Patient Login Success",success:true,id:newPatient._id,name:newPatient.pname}
-        console.log(result);
-        res.status(200).send(result);
-    }
+        res.status(200).send({user,"message":"Patient login successful"});
     }
     catch(err){
-        res.status(500).send(err);
+        res.status(500).send({error: err.message});
     }
 }
-
 module.exports = {
     addPatient,
     getPatient,

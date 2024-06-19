@@ -22,27 +22,17 @@ async function getDoctor(req,res){
     }
 }
 
-async function loginDoctor(req, res) {
-    console.log(req.body);
+async function loginDoctor(req, res){
     try{
-
-        const newDoctor = await doctorModules.findOne({demail: req.body.demail, dpassword: req.body.dpassword});
-        if(!newDoctor){
-            return res.status(201).send({"message":"Doctor not found",success:false});
+        const {demail,dpassword} = req.body;
+        const user = await doctorModules.findOne({demail});
+        if(!user || !(await user.comparePassword(dpassword))){
+            return res.status(400).send({error: 'Invalid email or password'});
         }
-    const isMatch = await doctorModules.findOne({dpassword: req.body.dpassword});
-    if(!isMatch){
-        return res.status(201).send({"message":"Password is incorrect",success:false});
-    }
-    else{
-        result ={"message":"Login Success",success:true,id:newDoctor._id,name:newDoctor.dname}
-        console.log(result);
-        return res.status(200).send(result);
-        
-    }
+        res.status(200).send({user,"message":"Doctor login successful"});
     }
     catch(err){
-        return res.status(500).send(err);
+        res.status(500).send({error: err.message});
     }
 }
 
