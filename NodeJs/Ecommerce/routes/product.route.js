@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const Product = require('../module/product.model.js');
+const Product = require('../model/product.model');
+const auth = require('../middleware/auth');
 
 router.post('/products', async (req, res)=> {
     
@@ -16,7 +17,7 @@ router.post('/products', async (req, res)=> {
     }
 }),
 
-router.get('/products',async (req, res) => {
+router.get('/products', auth, async (req, res) => {
     try {
         const products = await Product.find();
         res.status(200).send(products);

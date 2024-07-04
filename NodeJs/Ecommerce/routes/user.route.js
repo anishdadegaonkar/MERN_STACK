@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const jwt = require('jsonwebtoken');
-const User = require('../module/user.module');
+const User = require('../model/user.module');
 
 router.post('/register', async (req, res) => {
     try {
@@ -14,7 +14,7 @@ router.post('/register', async (req, res) => {
         res.status(400).send({
             message: err.message
         })
-    }
+    }   
 });
 
 router.post('/login', async (req, res) => {
@@ -36,5 +36,17 @@ router.post('/login', async (req, res) => {
     }
 
 });
+
+router.get('/getusers', async (req, res) => {
+    try {
+        const users = await User.find();
+        res.status(200).send(users);
+    }
+    catch (err) {
+        res.status(500).send({
+            message: err.message || "Some error occurred while retrieving users."
+        });
+    }
+})
 
 module.exports = router;
