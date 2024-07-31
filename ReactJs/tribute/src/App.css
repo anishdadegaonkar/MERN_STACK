@@ -2,24 +2,6 @@
   text-align: center;
 }
 
-.container{
-  background-color: #61dafb;
-  font-size: larger;
-}
-
-.btn{
-  background-color: #61dafb;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 16px;
-  margin: 4px auto;
-  width: 200px;
-  cursor: pointer;
-}
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;

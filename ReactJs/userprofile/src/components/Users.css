@@ -1,0 +1,26 @@
+.userlist {
+  /* float: left; */
+  margin-top: 50px;
+}
+
+.link {
+  text-decoration: none;
+}
+.list-group-item {
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.list-group-item:hover {
+  background-color: #5dddd7;
+}
+
+.selected {
+  background-color: #9bbadb;
+  color: white;
+}
+
+.cardhover:hover{
+    transition: ease-in-out 0.3s;
+    transform: scale(1.2);
+}
